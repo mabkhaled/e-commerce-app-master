@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<section class="product-details spad">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6">
+<div class="product__details__pic">
+<div class="product__details__pic__item">
+<img class="product__details__pic__item--large" src="{{product?.ImagePath}}" alt="">
+</div>
+
+</div>
+</div>
+<div class="col-6 ps-4">
+    <span>Stock: {{product?.Stock}}</span>
+
+        <div class="mt-3 mb-3" innerHTML="{{product?.Description}}"></div>
+   
+    <div class="input-group mb-3 stock">
+        <button class="btn btn-primary" type="button" (click)="minusBasketCounter()"[disabled]="!(basketCounter>1)"  id="button-addon1">-</button>
+        <input type="number" min="0" max="{{product?.Stock}}" value="{{basketCounter}}" #quantity value="1" #Quantity   class=" text-center bg-white text-primary" disabled placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <button class="btn btn-primary" type="button" (click)="plusBasketCounter()" [disabled]="!(maxBasketNumber>basketCounter)"   id="button-addon1">+</button>
+
+    </div>
+    <button class="btn btn-primary" (click)="addBasket(product,quantity.value)">add to Basket</button>
+    <button class="btn btn-danger ms-2" routerLink="">Continue Shopping</button>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="product__details__tab">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab" aria-selected="true">Explanation</a>
+</li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1" role="tabpanel">
+<div class="product__details__tab__desc">
+<h6>About product</h6>
+<p>The building and the yard is more important than the vehicle element but it is important to the owner.
+    Children enter the very door of the clinic. He needs a big smile. We live
+    he takes a tortor eget felis porttitor volutpat. It's important to have a home and a backyard
+    But the vehicle element is a lot of money. Until then, I need to do my homework.
+    Vivamus suscepti tortor eget felis porttitor volutpat. It was a classroom
+    It is a layer of financing and, at the same time, the airline. It is a wise mass, a valley
+    not even the kids, unless you want to. It should be more important than the vehicles
+    But let it be an important element. Before him, the first thing in the throats of the hospital mourns
+    and to put basketball in the beds of Care; Whether he likes it or not, the author has some kind of problem
+    or, the ullamcorper should be a lot of fun. He needs a big smile.</p>
+<p>It's a wise mass, the valley is not even from the kids, it's only necessary. Welcome
+    The pain itself is important, and it will be followed by the client's education. Maurice flatters the trucks
+    elit, eget tincidunt nibh pulvinar a. To-morrow, a small but great thing was said
+    gate To-morrow the gate was said to be small but large. But the airline bed
+    level Mauris flatters the elit, needs the tincidunt nibh pulvinar a.
+    The building and the yard is more important than the vehicle element but it is important to the owner. But
+    air freight The production and the backyard should be more important than the vehicle element
+    but let it be a thing of God. He needs a big smile.</p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</section>

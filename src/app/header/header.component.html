@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<header class="header">
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-3">
+  <div class="header__logo">
+  <a href="index-2.html"><img src="https://images.ctfassets.net/wn7ipiv9ue5v/7KiWwShT7SENAxfHhRQRcW/6e291380c22de8f2fbd19a2d86cb91b8/RDR2_CompareEditions_Standard_1632x831.jpg" alt=""></a>
+  </div>
+  </div>
+  <div class="col-lg-6">
+  <nav class="header__menu">
+  <ul  >
+  <li><a [hidden]="isAnyAdminAuthentication"  routerLink="">Home</a></li>
+  <li><a [hidden]="isAnyAdminAuthentication" routerLink="/products">products</a></li>
+  <li><a [hidden]="isAnyAdminAuthentication" routerLink="/contact">contact</a></li>
+  <li><a [hidden]="isAnyAdminAuthentication" routerLink="/about" >about</a></li>
+  </ul>
+  <ul [hidden]="!isAnyAdminAuthentication">
+    <li><a href="index-2.html" routerLink="">Home</a></li>
+    <li ><a  routerLink="/admin-products">products</a></li>
+    <li><a routerLink="/admin-categories">about</a></li>
+  </ul>
+  </nav>
+  </div>
+  <div class="col-lg-3">
+  <div class="header__cart">
+  <ul *ngIf="!checkAnyUserAuthentication(); else loggedOut">
+  <li><a routerLink="/card"><i class="fa fa-shopping-bag fs-3"></i> <span>{{CartLength()}}</span></a></li>
+  <li><a  class="text-danger ms-4" routerLink="/login">login</a></li>
+  <li><a  class="text-danger ms-2" routerLink="/register">register</a></li>
+  </ul>
+  <ng-template #loggedOut>
+    <ul >
+      <li>
+        <li     [hidden]="isAnyAdminAuthentication"><a routerLink="./card"><i class="fa fa-shopping-bag fs-3"></i> <span>{{CartLength()}}</span></a></li>
+        <li><a  [hidden]="isAnyAdminAuthentication" routerLink="./profile" class="text-dark"><i  class="fa fa-user fs-5 ms-2"></i> Profil</a></li>
+        <li><a  [hidden]="!isAnyAdminAuthentication" routerLink="./profile" class="text-dark"><i  class="fa fa-user fs-5 ms-2"></i> Admin</a></li>
+        <a type="button" class="text-danger ms-2 " (click)="logOut()">LogOut</a>  
+    </ul>
+  </ng-template>
+  </div>
+  </div>
+  </div>
+  <div class="humberger__open">
+  <i class="fa fa-bars"></i>
+  </div>
+  </div>
+    
+  
+
+  </header>
+  <section class="hero">
+<div class="container">
+<div class="row">
+<div class="col-lg-3">
+<div class="hero__categories">
+</div>
+</div>
+</div>
+</div>
+</section>

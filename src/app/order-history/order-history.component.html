@@ -1,0 +1,71 @@
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Order date</th>
+      <th scope="col">Total amount</th>
+      <th scope="col">Order Detail</th>
+      <th scope="col">Transactions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of getOrders()">
+      <th scope="row">{{order.Id}}</th>
+      <td>{{order.OrderDate | date:'fullDate'}}</td>
+      <td>{{order.TotalPrice}}</td>
+      <td><a routerLink="/profile/order-history/order-detail/{{order.Id}}">View details</a></td>
+      <td><button type="button"
+          class="btn btn-outline-danger btn-sm">Cancel Order </button></td>
+    </tr>
+  </tbody>
+</table>
+<div class="tab-content">
+  <div class="tab-pane active" id="tabs-1" role="tabpanel">
+    <div class="product__details__tab__desc">
+      <h6>About Order Processes</h6>
+      <p>The building and the yard is more important than the vehicle element but it is important to the owner.
+        Children enter the very door of the clinic. He needs a big smile. We live
+        he takes a tortor eget felis porttitor volutpat. It's important to have a home and a backyard
+        But the vehicle element is a lot of money. Until then, I need to do my homework.
+        Vivamus suscepti tortor eget felis porttitor volutpat. It was a classroom
+        It is a layer of financing and, at the same time, the airline. It is a wise mass, a valley
+        not even the kids, unless you want to. It should be more important than the vehicles
+        But let it be an important element. Before him, the first thing in the throats of the hospital mourns
+        and to put basketball in the beds of Care; Whether he likes it or not, the author has some kind of problem
+        or, the ullamcorper should be a lot of fun. He needs a big smile.</p>
+      <p>It's a wise mass, the valley is not even from the kids, it's only necessary. Welcome
+        The pain itself is important, and it will be followed by the client's education. Maurice flatters the trucks
+        elit, eget tincidunt nibh pulvinar a. To-morrow, a small but great thing was said
+        gate To-morrow the gate was said to be small but large. But the airline bed
+        level Mauris flatters the elit, needs the tincidunt nibh pulvinar a.
+        The building and the yard is more important than the vehicle element but it is important to the owner. But
+        air freight The production and the backyard should be more important than the vehicle element
+        but let it be a thing of God. He needs a big smile.</p>
+      <p>It's a wise mass, the valley is not even from the kids, it's only necessary. Welcome
+        The pain itself is important, and it will be followed by the client's education. Maurice flatters the trucks
+        elit, eget tincidunt nibh pulvinar a. To-morrow, a small but great thing was said
+        gate To-morrow the gate was said to be small but large. But the airline bed
+        level Mauris flatters the elit, needs the tincidunt nibh pulvinar a.
+        The building and the yard is more important than the vehicle element but it is important to the owner. But
+        air freight The production and the backyard should be more important than the vehicle element
+        but let it be a thing of God. He needs a big smile.</p>
+      <p>It's a wise mass, the valley is not even from the kids, it's only necessary. Welcome
+        The pain itself is important, and it will be followed by the client's education. Maurice flatters the trucks
+        elit, eget tincidunt nibh pulvinar a. To-morrow, a small but great thing was said
+        gate To-morrow the gate was said to be small but large. But the airline bed
+        level Mauris flatters the elit, needs the tincidunt nibh pulvinar a.
+        The building and the yard is more important than the vehicle element but it is important to the owner. But
+        air freight The production and the backyard should be more important than the vehicle element
+        but let it be a thing of God. He needs a big smile.</p>
+        <p>It's a wise mass, the valley is not even from the kids, it's only necessary. Welcome
+          The pain itself is important, and it will be followed by the client's education. Maurice flatters the trucks
+          elit, eget tincidunt nibh pulvinar a. To-morrow, a small but great thing was said
+          gate To-morrow the gate was said to be small but large. But the airline bed
+          level Mauris flatters the elit, needs the tincidunt nibh pulvinar a.
+          The building and the yard is more important than the vehicle element but it is important to the owner. But
+          air freight The production and the backyard should be more important than the vehicle element
+          but let it be a thing of God. He needs a big smile.</p>
+    </div>
+  </div>
+
+</div>
